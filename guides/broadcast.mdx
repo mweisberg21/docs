@@ -1,0 +1,43 @@
+---
+title: "Broadcast invites to your entire Slack workspace"
+sidebarTitle: "Broadcast"
+description: "Use Cake Day's broadcast feature to send a mass invite DM to every workspace member who hasn't opted in yet — available on Starter, Growth, and Pro."
+---
+
+Broadcast sends an invite DM to every workspace member who hasn't already opted in or explicitly declined. Instead of inviting people one by one, a single broadcast reaches your entire workspace in seconds.
+
+<Note>Broadcast is available on **Starter, Growth, and Pro** plans. It is not available on the Free plan. [Upgrade your plan](https://cakeday.io/pricing) to unlock it.</Note>
+
+## How to run a broadcast
+
+You can start a broadcast from Slack or from the dashboard.
+
+**From Slack:** Run `/cakeday broadcast` in any channel.
+
+**From the dashboard:** Go to [cakeday.io/app/roster](https://cakeday.io/app/roster) and click **Broadcast**.
+
+Either way, Cake Day opens a preview modal showing the exact DM that will be sent. Review it before confirming — once you confirm, the DMs go out immediately.
+
+<Warning>Broadcast DMs go to everyone in your workspace who hasn't already responded to a Cake Day invite. Review the preview carefully before clicking confirm — there is no way to recall messages once they're sent.</Warning>
+
+## Who receives the broadcast
+
+Cake Day sends the invite DM to every workspace member **except**:
+
+- Members who have already opted in and are on the roster
+- Members who have previously clicked **No thanks** on an invite
+
+If someone declined a previous invite, the broadcast will not re-invite them. An admin can still send them a manual invite via `/cakeday invite @user` if they change their mind.
+
+## What recipients see
+
+Each recipient gets the same friendly invite DM that a one-on-one invite sends:
+
+- **Add my dates** — opens a modal to enter their birthday and optional work start date
+- **No thanks** — records their decline
+
+Once they respond, their status updates on your roster automatically.
+
+## Audit logs
+
+Cake Day retains broadcast logs for up to 12 months. You can use these logs to confirm when a broadcast was sent and which admin triggered it.

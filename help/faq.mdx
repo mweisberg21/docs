@@ -1,0 +1,76 @@
+---
+title: "Frequently asked questions about Cake Day"
+sidebarTitle: "FAQ"
+description: "Answers to common questions about how Cake Day works, the opt-in model, who can see your dates, the annual cap, AI shoutouts, and data deletion."
+---
+
+Cake Day is designed to be simple for both admins and teammates. If something isn't covered here, email [**info@cakeday.io**](mailto:info@cakeday.io) and we'll get back to you within 1 business day (paid plans) or 2 business days (Free).
+
+<AccordionGroup>
+  <Accordion title="Does everyone in my workspace get added to Cake Day automatically?">
+    No. Cake Day uses an opt-in model. Each person must add their own dates via `/cakeday me` or by clicking "Add my dates" in an invite DM. Admins can invite people, but nobody is added without their consent.
+  </Accordion>
+
+  <Accordion title="How do I add my birthday?">
+    Run `/cakeday me` in any Slack channel or DM. A modal opens where you can enter your birth month and day (and your work start date, if you'd like). You can update these at any time by running the same command again.
+  </Accordion>
+
+  <Accordion title="Can I keep my birth year private?">
+    Yes. Cake Day only asks for your birth month and day — never the year. Your age is never revealed to anyone.
+  </Accordion>
+
+  <Accordion title="What if I don't want shoutouts anymore?">
+    Run `/cakeday me` and select **Remove me entirely** to permanently delete your entry. You can also click **No thanks** on an invite DM to decline being added in the first place. Workspace admins can also remove you from the Roster page in the dashboard.
+  </Accordion>
+
+  <Accordion title="Who can see my birthday?">
+    Your workspace admins can see your birthday and work start date in the Cake Day dashboard at [cakeday.io/app](https://cakeday.io/app). Other workspace members cannot see your dates.
+  </Accordion>
+
+  <Accordion title="How does the annual celebration cap work?">
+    Each shoutout posted uses one credit from your workspace's annual cap. The cap resets on your workspace's install anniversary. Here's how the caps break down by plan:
+
+    | Plan | Annual cap |
+    | --- | --- |
+    | Free | 30 |
+    | Starter | 150 |
+    | Growth | 500 |
+    | Pro | Unlimited |
+
+    Run `/cakeday usage` to check your current balance and reset date.
+  </Accordion>
+
+  <Accordion title="What happens when we hit the cap?">
+    Cake Day skips the celebration, logs it, and DMs workspace admins to let them know. Skipped celebrations are not retroactively posted after an upgrade — only future celebrations will be sent. Upgrading your plan restores headroom immediately.
+
+    <Warning>
+      If you're approaching your cap, upgrade before the cap is reached to avoid skipped celebrations. Run `/cakeday usage` to check your balance.
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Can I set separate channels for birthdays and anniversaries?">
+    Yes, on Starter, Growth, and Pro plans. On Free, both types post to the same channel. You can configure channels at [cakeday.io/app/settings](https://cakeday.io/app/settings).
+  </Accordion>
+
+  <Accordion title="Can I pause shoutouts (e.g., during holidays)?">
+    Yes. Go to [Settings](https://cakeday.io/app/settings) and toggle **Paused**. No shoutouts will be posted while Cake Day is paused. Celebrations that fall during a pause are not retroactively sent after you resume.
+  </Accordion>
+
+  <Accordion title="What AI model does Cake Day use?">
+    Cake Day uses Google's Gemini 2.5 Flash via the paid Gemini API to write each celebration message. Cake Day sends only the celebrant's display name, celebration type (birthday or anniversary), timing framing, and — for anniversaries — the year count. No personal emails, message history, or other sensitive data is sent to Google.
+
+    Per Google's paid Gemini API terms, content sent via the paid API is not used to train or improve Google's models.
+  </Accordion>
+
+  <Accordion title="What data does Cake Day store about me?">
+    Cake Day stores your Slack user ID, display name, birth month and day, and work start date (if you provided it). It does not store your birth year, email address, profile photo, or any message content.
+
+    See [Privacy & Data](/help/privacy-and-data) for full details.
+  </Accordion>
+
+  <Accordion title="What happens to my data if I uninstall?">
+    All roster, configuration, and audit data is deleted within 30 days of uninstall. Stripe billing records are retained for up to 7 years to comply with U.S. tax law.
+
+    See [Privacy & Data](/help/privacy-and-data) for full details.
+  </Accordion>
+</AccordionGroup>

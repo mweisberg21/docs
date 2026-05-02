@@ -1,0 +1,46 @@
+---
+title: "Cake Day slash commands reference"
+sidebarTitle: "Slash Commands"
+description: "A complete reference for every /cakeday slash command — what each subcommand does, which ones require admin access, and what response to expect."
+---
+
+Every Cake Day action available from Slack starts with `/cakeday` followed by a subcommand. All responses are ephemeral — only you see them — unless the command posts a shoutout to a channel.
+
+<Note>
+  All command responses are ephemeral and only visible to you. The only messages visible to your team are real scheduled shoutouts posted to your celebration channels.
+</Note>
+
+## Commands for everyone
+
+These commands are available to all workspace members, regardless of admin status.
+
+| Command | What it does |
+|---|---|
+| `/cakeday me` | Opens a modal where you can view or update your birthday and work start date, or remove yourself from the roster. |
+| `/cakeday admins` | Lists the current Cake Day admins and the celebration channels configured for your workspace. Also available as `/cakeday who`. |
+| `/cakeday help` | Shows available commands. Admin-only commands are shown only if you're an admin. If the paused state is active, a notice appears here. |
+
+## Commands for admins only
+
+These commands are restricted to Cake Day admins. Running them as a non-admin returns an ephemeral "Admins only" message.
+
+| Command | What it does |
+|---|---|
+| `/cakeday invite @user` | Sends a Cake Day DM invite to the specified user. The invite asks them to add their birthday and work start date. Omit `@user` to open a picker modal and select someone from a list. |
+| `/cakeday broadcast` | Opens the broadcast flow to send a Cake Day invite DM to the whole workspace. Available on Starter and above. |
+| `/cakeday test @user` | Generates and previews a birthday shoutout for `@user`. The preview is ephemeral — only you see it. |
+| `/cakeday test @user anniversary` | Previews a work-anniversary shoutout for `@user` instead. |
+| `/cakeday usage` | Shows your annual celebration budget: your plan tier, how many celebrations you've sent, your cap, how many remain, and when the period resets. |
+| `/cakeday setup` | Redirects to the setup wizard if your workspace hasn't completed initial setup, or to the dashboard if setup is already done. |
+
+## Redirects to the dashboard
+
+The following subcommands redirect you to the Settings page at [cakeday.io/app/settings](https://cakeday.io/app/settings). They exist so that commands you may have memorized from an earlier version of Cake Day still work and take you somewhere useful.
+
+- `/cakeday channel`
+- `/cakeday time`
+- `/cakeday timezone`
+- `/cakeday pause`
+- `/cakeday resume`
+
+All configuration for channels, post time, timezone, and the pause toggle lives in the web dashboard rather than Slack commands.

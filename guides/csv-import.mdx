@@ -1,0 +1,44 @@
+---
+title: "Bulk-import your roster via CSV"
+sidebarTitle: "CSV Import"
+description: "Upload a CSV to bulk-add team birthdays and work anniversaries to your Cake Day roster without sending individual invite DMs. Available on Starter and above."
+---
+
+If you already have a list of teammate birthdays or work anniversaries in a spreadsheet, CSV import lets you add them to your Cake Day roster in one step. Members imported via CSV are set to Active immediately — Cake Day doesn't send them an opt-in DM.
+
+<Note>CSV import is available on **Starter, Growth, and Pro** plans. It is not available on the Free plan. [Upgrade your plan](https://cakeday.io/pricing) to unlock it.</Note>
+
+## How to import
+
+<Steps>
+  <Step title="Open the Roster page">
+    Go to [cakeday.io/app/roster](https://cakeday.io/app/roster) and click **Import CSV**.
+  </Step>
+  <Step title="Get the CSV template">
+    Click **Download template** to get a pre-formatted CSV file with the correct column headers. You can also prepare your own file — see the column reference below.
+  </Step>
+  <Step title="Fill in your data">
+    Open the file in your spreadsheet app and fill in each member's details. At minimum, each row needs a `slack_user_id`. See the [column reference](#csv-column-reference) below for all available fields.
+  </Step>
+  <Step title="Upload and confirm">
+    Upload your completed CSV file and review the preview. Cake Day shows you how many rows will be added or updated before you commit. Click **Import** to apply.
+  </Step>
+</Steps>
+
+## CSV column reference
+
+| Column | Required | Description |
+|---|---|---|
+| `slack_user_id` | Yes | The member's Slack user ID (e.g. `U01234ABCDE`). To find it: click the member's profile in Slack → **More** → **Copy member ID**. |
+| `birth_month` | No | Birth month as a number (1–12). |
+| `birth_day` | No | Birth day as a number (1–31). |
+| `work_start_year` | No | The year the member joined (e.g. `2021`). |
+| `work_start_month` | No | Work start month as a number (1–12). |
+| `work_start_day` | No | Work start day as a number (1–31). |
+
+## Important notes
+
+- **Rows without `birth_month` and `birth_day`** will be added to the roster but won't receive birthday shoutouts until dates are filled in.
+- **Work anniversary shoutouts** are only sent when `work_start_year`, `work_start_month`, and `work_start_day` are all present.
+- **The import merges with your existing roster** — it does not delete existing entries. If a row matches a member already on the roster, their record is updated.
+- **Members imported via CSV are set to Active** — no opt-in DM is sent. If you want them to confirm or update their own dates, you can still invite them afterward via `/cakeday invite @user`.

@@ -1,0 +1,104 @@
+---
+title: "How Cake Day handles your data and privacy"
+sidebarTitle: "Privacy & Data"
+description: "What data Cake Day collects, how long it's retained, how AI shoutouts are generated safely, and the steps to delete your data as a member or admin."
+---
+
+Cake Day is built with a minimal data footprint. It collects only what's needed to run celebrations, never sells data, and gives both individuals and admins clear paths to delete anything at any time.
+
+## What Cake Day collects
+
+**Workspace-level data**
+
+- Workspace ID and workspace name
+- Bot tokens (encrypted at rest using application-level encryption — never stored in plaintext)
+- Settings: celebration channel, post time, timezone, and custom AI tone prompt (Pro only)
+
+**Member-level data**
+
+- Slack user ID and display name
+- Birth month and day (never the year)
+- Work start date — year, month, and day (if provided)
+- Opt-in / opt-out status
+
+**Billing data**
+
+- Stripe customer ID, subscription tier, and usage count
+- Stripe stores all card data directly — Cake Day never sees or stores card numbers
+
+**Activity logs**
+
+- Records of which shoutouts were posted or skipped, used for usage tracking and audit purposes
+
+## What Cake Day does NOT collect
+
+- Your birth year
+- Email addresses
+- Message content or conversation history
+- Profile photos
+- Any data beyond what you explicitly provide
+
+## Data retention
+
+| Data type | Retention |
+| --- | --- |
+| Roster, settings, and audit data | Retained while Cake Day is installed; deleted within 30 days of uninstall |
+| Activity logs | 30 days (Free), 365 days (Starter), unlimited (Growth and Pro) |
+| Stripe billing records | Up to 7 years (U.S. tax compliance) |
+
+## AI and Google Gemini
+
+Each shoutout is generated via a stateless call to the Google Gemini API — there is no persistent session and no shared context across workspaces.
+
+**What Cake Day sends to Gemini per celebration:**
+
+- The celebrant's first-name handle (display name)
+- Celebration type: birthday or anniversary
+- Timing framing: today, tomorrow, or weekend-shifted
+- Year count (for anniversaries only)
+
+Cake Day never sends Slack tokens, email addresses, message history, roster contents, or any organization-identifying details beyond the celebrant's name.
+
+**Training data:** Per Google's paid Gemini API terms, prompt and response content is not used to train or improve Google's models. Cake Day uses the paid commercial Gemini API, not the consumer Gemini product.
+
+**Pro custom tone prompts:** Workspaces on Pro can set a custom AI tone prompt in Settings. This string is appended to Cake Day's standard system prompt and is never shared across workspaces.
+
+## Deleting your data
+
+**As an individual member:**
+
+- Run `/cakeday me` in Slack and select **Remove me entirely** to permanently delete your roster entry
+- Click **No thanks** on an invite DM to decline being added
+
+**As a workspace admin:**
+
+- Go to the Roster page → three-dot menu next to a member → **Remove**
+- To delete all workspace data, uninstall Cake Day from Slack — all data is deleted within 30 days
+
+**Formal data requests (GDPR, CCPA, and similar):** Email [info@cakeday.io](mailto:info@cakeday.io) with your workspace name and request. We acknowledge within 5 business days and complete deletion within 30 days, with written confirmation.
+
+<Note>
+  Stripe billing records (customer ID, subscription history, invoice metadata) are retained for up to 7 years regardless of uninstall, as required by U.S. tax law. This is noted in the [Privacy Policy](https://cakeday.io/privacy).
+</Note>
+
+## Sub-processors
+
+These are the services Cake Day relies on to operate:
+
+| Service | Purpose |
+| --- | --- |
+| Slack Technologies, LLC | Workspace integration, event delivery, and message posting |
+| Google LLC | Gemini AI for shoutout generation |
+| Stripe, Inc. | Payment processing and subscription billing |
+| Supabase, Inc. | Postgres database hosting and backups (us-west-2, United States) |
+| Fly.io, Inc. | Bot application hosting (United States) |
+| Vercel, Inc. | Dashboard and marketing site hosting (United States) |
+| Cloudflare, Inc. | DNS, CDN, and edge security |
+
+Full sub-processor list: [cakeday.io/sub-processors](https://cakeday.io/sub-processors)
+
+## Links
+
+- [Privacy Policy](https://cakeday.io/privacy)
+- [Terms of Service](https://cakeday.io/terms)
+- Security contact: [info@cakeday.io](mailto:info@cakeday.io)

@@ -1,0 +1,76 @@
+---
+title: "Invite teammates to Cake Day"
+sidebarTitle: "Invite Members"
+description: "Learn the five ways to get teammates onto the Cake Day roster — individual slash commands, picker modals, dashboard invites, broadcast DMs, and CSV import."
+---
+
+Cake Day never adds people to the roster automatically. Every teammate must opt in themselves — either by responding to an invite DM you send, or by running `/cakeday me` in Slack. This keeps birthdays and work anniversaries private until each person chooses to share them.
+
+<Note>Only Cake Day admins can send invites. If you don't see the invite options below, ask your workspace admin to grant you admin access from the [Admins page](https://cakeday.io/app/admins).</Note>
+
+## Method 1: Individual invite via slash command
+
+Use `/cakeday invite @user` to send a single invite DM directly from Slack.
+
+<Steps>
+  <Step title="Type the invite command">
+    In any Slack channel or DM, run:
+
+    ```
+    /cakeday invite @teammate
+    ```
+
+    Replace `@teammate` with the person you want to invite.
+  </Step>
+  <Step title="Cake Day sends the invite DM">
+    The teammate receives a direct message from Cake Day with two buttons:
+
+    - **Add my dates** — opens a modal where they enter their birthday (and optionally their work start date)
+    - **No thanks** — records their decline
+
+    You'll see an ephemeral confirmation in Slack once the DM is sent.
+  </Step>
+  <Step title="Teammate responds">
+    If they click **Add my dates** and submit the modal, they appear as Active on your roster. If they click **No thanks**, Cake Day records their decline and won't re-invite them automatically.
+  </Step>
+</Steps>
+
+## Method 2: User picker modal
+
+Run `/cakeday invite` with no arguments to open a modal where you can select one or more teammates at once.
+
+1. Run `/cakeday invite` in any Slack channel.
+2. The user picker modal opens — search for and select the teammates you want to invite.
+3. Submit the modal. Cake Day sends an invite DM to each person you selected.
+
+This works the same as the individual invite — each recipient gets the same DM with **Add my dates** and **No thanks** buttons.
+
+## Method 3: From the dashboard
+
+You can also send invite DMs from the web dashboard without leaving the browser.
+
+1. Go to [cakeday.io/app/roster](https://cakeday.io/app/roster).
+2. Click **Add to roster**.
+3. Pick the members you want to invite from the picker.
+4. Click **Send DM invites**. Cake Day sends each selected member the invite DM.
+
+## Method 4: Broadcast (Starter and above)
+
+Broadcast sends an invite DM to every workspace member who hasn't already opted in or declined — all at once. This is the fastest way to grow your roster when you're getting started.
+
+Broadcast is available on **Starter, Growth, and Pro** plans. See the [Broadcast guide](/guides/broadcast) for full details on how to run one.
+
+## Method 5: CSV import (Starter and above)
+
+If you already have a spreadsheet of birthdays and work anniversaries, you can import the whole roster in one go without sending invite DMs.
+
+CSV import is available on **Starter, Growth, and Pro** plans. Members added via CSV are set to Active immediately — no opt-in DM is required. See the [CSV import guide](/guides/csv-import) for the full walkthrough and column reference.
+
+## What the invite DM looks like
+
+When a teammate receives an invite, they see a friendly DM from Cake Day that briefly explains what the app does and gives them two choices:
+
+- **Add my dates** — opens a modal to enter their birthday and optional work start date
+- **No thanks** — closes the invite and records their decline
+
+If someone declines, Cake Day won't re-invite them automatically. An admin can always send them a fresh invite manually if they change their mind.

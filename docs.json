@@ -1,0 +1,90 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "almond",
+  "name": "Cake Day",
+  "description": "Help center for Cake Day — the Slack app that sends AI-generated birthday and work-anniversary shoutouts to your team.",
+  "colors": {
+    "primary": "#3244FF",
+    "light": "#f7f0df",
+    "dark": "#493872"
+  },
+  "favicon": "https://media.brand.dev/91eb86b0-33e0-4297-8a22-9314aef66d03.png",
+  "icons": {
+    "library": "lucide"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "contextual": {
+    "options": ["copy", "view", "assistant"]
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "how-it-works"
+            ]
+          },
+          {
+            "group": "Using Cake Day",
+            "pages": [
+              "using/dashboard",
+              "using/roster",
+              "using/settings",
+              "using/slack-commands"
+            ]
+          },
+          {
+            "group": "Admin Guides",
+            "pages": [
+              "guides/inviting-members",
+              "guides/broadcast",
+              "guides/team-leaders",
+              "guides/csv-import"
+            ]
+          },
+          {
+            "group": "Plans & Billing",
+            "pages": [
+              "billing/plans",
+              "billing/upgrade",
+              "billing/usage-and-caps"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/privacy-and-data",
+              "help/troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Pricing",
+        "href": "https://cakeday.io/pricing"
+      },
+      {
+        "href": "https://cakeday.io/app",
+        "label": "Login"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Add to Slack",
+      "href": "https://cakeday.io"
+    }
+  },
+  "logo": "/images/Cakeday.png"
+}

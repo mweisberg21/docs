@@ -1,0 +1,51 @@
+---
+title: "Manage your celebration roster in Cake Day"
+sidebarTitle: "Roster"
+description: "The Roster page shows every workspace member who has opted in, been invited, or been removed, and lets admins add, edit, and remove people."
+---
+
+The Roster page at [cakeday.io/app/roster](https://cakeday.io/app/roster) is where you manage who receives birthday and work-anniversary shoutouts. Every row in the roster represents a workspace member and shows their status, celebration dates, and available actions.
+
+<Note>
+  Cake Day never silently adds people to the roster. Every member must actively opt in — either by accepting a DM invite or by running `/cakeday me` themselves.
+</Note>
+
+## Roster statuses
+
+| Status | Meaning |
+|---|---|
+| **Active** | The member has opted in. Cake Day will post a shoutout on their birthday and/or work anniversary. |
+| **Pending** | An invite DM has been sent. The member hasn't responded yet. |
+| **Opted out** | The member received an invite and declined. |
+| **Removed** | An admin deleted the member from the roster. |
+
+## Adding individuals
+
+To invite a specific person from the dashboard, click **Add to roster** and choose **Send Slack DM invite**. Cake Day sends them a direct message with a button to add their birthday and work start date.
+
+From Slack, admins can run `/cakeday invite @user` to send the same DM invite directly. Omitting `@user` opens a picker modal so you can select someone from a list.
+
+## Self-service for members
+
+Any workspace member can manage their own entry at any time by running `/cakeday me` in Slack. This opens a modal where they can:
+
+- Add their birthday (month and day)
+- Add their work start date
+- Update either date
+- Remove themselves from the roster
+
+Members don't need admin access to use `/cakeday me`.
+
+## Editing dates
+
+Admins can edit a member's birthday or work anniversary directly from the Roster page. Find the member in the list and click their row to open the edit panel.
+
+## Removing members
+
+To remove someone from the roster, click the three-dot menu on their row and select **Remove**. Removed members won't receive shoutouts and won't appear in the Active list, but an admin can re-invite them at any time.
+
+## CSV import
+
+If you want to add your whole team at once, CSV import lets you upload a spreadsheet of names and dates without sending individual DM invites. This feature is available on Starter and above.
+
+See [CSV import guide](/guides/csv-import) for the required format and step-by-step instructions.

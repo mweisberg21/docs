@@ -1,0 +1,54 @@
+---
+title: "Celebration caps and annual usage in Cake Day"
+sidebarTitle: "Usage & Caps"
+description: "How Cake Day counts celebration credits, when the annual cap resets, what happens when you hit the limit, and how to check your remaining balance."
+---
+
+Each Cake Day plan includes a set number of **celebrations per year**. Understanding how the cap works helps you avoid unexpected gaps in your team's shoutouts.
+
+## What counts as a celebration
+
+Every shoutout Cake Day posts in Slack — whether it's a birthday or a work anniversary — uses one credit from your annual cap. The cap counts posts sent, not people on your roster. Roster size is unlimited on all plans.
+
+## When the cap resets
+
+Your annual cap resets on the **anniversary of your workspace's install date**, not on January 1. For example, if you installed Cake Day on March 10, your cap resets each March 10. You can see the exact reset date in the `/cakeday usage` output or on the Billing page.
+
+There is no way to roll over unused credits to the next period.
+
+## What happens when you approach or hit the cap
+
+- **At 80% usage** — all admins receive a Slack DM warning with your current usage and reset date.
+- **At 100% (cap reached)** — Cake Day skips any celebration that would exceed the cap and sends all admins a DM identifying which celebration was skipped.
+
+<Warning>
+Skipped celebrations are logged but **not** retroactively posted after you upgrade. If a teammate's birthday was skipped, Cake Day will not go back and post it once you add more capacity.
+</Warning>
+
+Upgrading mid-period immediately restores the remaining cap for that period. If you upgrade from Starter (150) to Growth (500) after using 140 credits, you have 360 credits available until your next reset.
+
+## Free plan specifics
+
+The Free plan includes **30 celebrations per year** — enough for a small team. There is no way to purchase additional credits on the Free plan; upgrade to Starter or higher to raise the cap.
+
+## Checking your current usage
+
+Run `/cakeday usage` in any Slack channel (admins only):
+
+```
+/cakeday usage
+```
+
+Sample output:
+
+```
+Cake Day usage — Starter plan
+📊 47 of 150 celebrations used (31%) — 103 remaining.
+Resets January 15, 2027. Upgrade for more →
+```
+
+You can also check usage at any time from [cakeday.io/app/billing](https://cakeday.io/app/billing).
+
+<Tip>
+Run `/cakeday usage` at the start of each month if you're on a plan with a cap. Catching a high-usage month early gives you time to upgrade before a celebration gets skipped.
+</Tip>

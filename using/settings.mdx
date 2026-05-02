@@ -1,0 +1,90 @@
+---
+title: "Configure Cake Day settings for your workspace"
+sidebarTitle: "Settings"
+description: "The Settings page at cakeday.io/app/settings controls celebration channels, post schedule, pause state, AI voice, custom GIFs, and custom branding."
+---
+
+The Settings page at [cakeday.io/app/settings](https://cakeday.io/app/settings) is where you configure how and when Cake Day posts shoutouts, and — on higher plans — how those shoutouts look and sound. The page is organized into three tabs: **General**, **Voice & branding**, and **Custom GIFs**.
+
+<Note>
+  Running `/cakeday setup` in Slack redirects to the setup wizard if your workspace hasn't completed initial configuration, or to the dashboard if setup is already done. Running `/cakeday settings` always redirects directly to the Settings page.
+</Note>
+
+## General
+
+### Celebration channels
+
+**Birthday channel** — the Slack channel where Cake Day posts birthday shoutouts. This field is required.
+
+**Work anniversary channel** — the Slack channel for work-anniversary shoutouts. On Starter and above you can choose a different channel from your birthday channel. On Free, Cake Day uses a single channel for both event types.
+
+The channel picker only shows channels the Cake Day bot has been added to. If you don't see a channel you want to use, add the bot to it in Slack first, then return to Settings.
+
+### Post schedule
+
+**Post time** — the time of day Cake Day sends shoutouts (for example, 9:00 AM). All celebrations for that day go out at this time.
+
+**Timezone** — the timezone Cake Day uses to evaluate the post time. Set this to your workspace's primary timezone so shoutouts land at the right moment for your team.
+
+### Pause / resume
+
+The **Live / Paused** toggle at the top right of the General panel lets you stop all shoutouts without changing any other settings. While Cake Day is paused:
+
+- No birthday or anniversary posts are sent.
+- The paused state is visible to your team in `/cakeday help` and the Slack Home tab.
+- Your roster, channels, and schedule are preserved and ready when you resume.
+
+Flip the toggle back to **Live** to resume posting.
+
+## Voice & branding (Pro)
+
+### Custom AI voice
+
+The **Voice guidance** field lets you write a short prompt — up to 2,000 characters — that shapes the style of every AI-generated shoutout. For example: *"Use a slightly more formal tone. Avoid emoji of food. Always sign off with —the team."*
+
+This field is only active on the Pro plan. On lower plans the field is locked and a prompt has no effect.
+
+Your guidance shapes style only. Cake Day's safety rules — never fabricating facts about a teammate, never claiming personal knowledge, length limits, profanity filters — always apply on top of whatever you write.
+
+### Custom branding
+
+**Display name** — the name the bot uses when posting shoutouts (e.g., "People Team" instead of "Cake Day"). Leave blank to use the default.
+
+**Avatar icon** — a custom image (PNG or JPEG, max 1 MB, square recommended) used as the bot's profile picture when posting. Upload a new icon or remove the current one from this panel.
+
+Custom branding applies to real scheduled shoutouts only. Previews from `/cakeday test` always render with the default Cake Day identity due to a Slack platform limitation.
+
+Both fields are Pro-only and locked on lower plans.
+
+## Custom GIFs (Growth and above)
+
+The Custom GIFs tab lets you build a GIF pool that Cake Day draws from when composing shoutouts. Growth workspaces can store up to 15 GIFs; Pro workspaces up to 50.
+
+### Adding GIFs
+
+You can add GIFs two ways:
+
+- **Upload your own** — upload a GIF, PNG, JPEG, or WebP file (max 8 MB).
+- **Search Giphy** — search Giphy directly from the dashboard and add a result to your pool.
+
+When adding a GIF, you can tag it as **Birthday**, **Anniversary**, or **Both** to control which event type it appears in.
+
+### GIF pool mode
+
+The mode toggle controls how Cake Day uses your custom GIFs:
+
+| Mode | Behavior |
+|---|---|
+| **Mixed with defaults** | Cake Day chooses from your custom GIFs and the curated default library. |
+| **Use only my GIFs** | Cake Day only uses GIFs from your custom pool. If your pool is empty or all GIFs are disabled, Cake Day falls back to the default library. |
+
+### Managing your GIFs
+
+Each GIF in your pool can be:
+
+- **Enabled or disabled** — disabled GIFs are excluded from shoutouts but stay in your pool.
+- **Labeled** — add a short name to keep your pool organized.
+- **Retagged** — change the event type (Birthday, Anniversary, Both) at any time.
+- **Deleted** — permanently removed from your pool.
+
+This feature is locked on Free and Starter. An upgrade prompt is shown in its place.

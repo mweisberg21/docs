@@ -1,0 +1,76 @@
+---
+title: "Troubleshoot common Cake Day issues"
+sidebarTitle: "Troubleshooting"
+description: "Fix common Cake Day issues: shoutouts not posting, slash commands failing, celebration cap limits, dashboard sign-in problems, and how to uninstall."
+---
+
+Most Cake Day issues fall into a handful of common categories. Work through the relevant section below. If nothing here resolves your issue, email [**info@cakeday.io**](mailto:info@cakeday.io) with your workspace name and a description of the problem — paid plan customers receive a response within 1 business day, Free plan within 2 business days.
+
+<AccordionGroup>
+  <Accordion title="Shoutouts aren't posting">
+    Work through these checks in order:
+
+    1. **Check if Cake Day is paused.** Run `/cakeday admins` — if Cake Day is paused, a notice appears in the response. Resume at [cakeday.io/app/settings](https://cakeday.io/app/settings).
+    2. **Verify the celebration channel is still accessible.** If the channel was deleted or the bot was removed from it, shoutouts can't be posted. Go to Settings and re-select the channel.
+    3. **Check your annual cap.** Run `/cakeday usage` to see how many celebrations you've used this period. If you've hit the limit, upgrade your plan at [cakeday.io/app/billing](https://cakeday.io/app/billing) or wait for your reset date.
+    4. **Confirm roster entries for today.** At least one active roster member must have today as their birthday or work anniversary for a shoutout to post.
+
+    <Note>
+      Skipped celebrations due to a cap are logged but not retroactively posted after an upgrade. Only future celebrations will be sent once you upgrade.
+    </Note>
+  </Accordion>
+
+  <Accordion title="I ran /cakeday me, but nothing happened">
+    - Make sure you typed the command exactly: `/cakeday me` with no extra spaces or characters.
+    - If the modal doesn't open, try running the command from a different Slack channel. Some channels block modals from opening.
+    - Confirm Cake Day is installed in your workspace by visiting [cakeday.io/app](https://cakeday.io/app). If it isn't installed, click **Add to Slack**.
+  </Accordion>
+
+  <Accordion title="A shoutout was skipped">
+    Your workspace has most likely hit its annual celebration cap.
+
+    - Run `/cakeday usage` to check your current usage and reset date.
+    - Skipped celebrations are logged in the activity log but are not retroactively posted after an upgrade.
+    - Upgrading your plan restores headroom immediately for all future celebrations. Visit [cakeday.io/app/billing](https://cakeday.io/app/billing) to upgrade.
+  </Accordion>
+
+  <Accordion title="I can't access the dashboard at cakeday.io/app">
+    - Make sure you're signed in with the correct Slack workspace at [cakeday.io/sign-in](https://cakeday.io/sign-in).
+    - If you see "Workspace not found," your workspace may not have Cake Day installed yet. Click **Add to Slack** to install it.
+    - Try signing out and back in if you recently switched workspaces.
+  </Accordion>
+
+  <Accordion title="A teammate received an invite DM but can't add their dates">
+    - Check whether the teammate has already opted out. Their status in the Roster page will show **Opted out** if they previously declined.
+    - If they need a fresh invite, go to the Roster page, find the member, and send a new invite from there. You can also run `/cakeday invite @user` in Slack.
+  </Accordion>
+
+  <Accordion title="I accidentally removed someone from the roster">
+    Send them a new invite to re-add them. You can do this two ways:
+
+    - Run `/cakeday invite @user` in Slack
+    - Go to the Roster page in the dashboard and use the invite option from there
+
+    They'll receive a fresh DM invite with the option to add their dates.
+  </Accordion>
+
+  <Accordion title="The slash command says I'm not an admin">
+    Cake Day has its own admin system separate from Slack workspace roles. The commands `/cakeday invite`, `/cakeday broadcast`, `/cakeday usage`, and `/cakeday test` are restricted to designated Cake Day admins — not all Slack workspace owners or admins are Cake Day admins by default.
+
+    - Run `/cakeday admins` to see who the current Cake Day admins are and who to contact.
+    - Ask a current Cake Day admin to add you at [cakeday.io/app/admins](https://cakeday.io/app/admins).
+  </Accordion>
+
+  <Accordion title="I want to uninstall Cake Day">
+    To remove Cake Day from your workspace:
+
+    1. In Slack, go to your workspace's **Apps** section.
+    2. Find **Cake Day** and select **Remove app** (or go to **Settings → Apps → Manage** and remove it from there).
+
+    After uninstall, all roster and configuration data is deleted within 30 days. Stripe billing records are retained for up to 7 years per tax law. See [Privacy & Data](/help/privacy-and-data) for details.
+
+    <Warning>
+      Uninstalling is permanent. Roster data cannot be recovered after the 30-day deletion window.
+    </Warning>
+  </Accordion>
+</AccordionGroup>

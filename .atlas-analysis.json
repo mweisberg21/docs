@@ -1,0 +1,89 @@
+{
+  "projectType": "saas",
+  "projectName": "Cake Day",
+  "projectDescription": "A Slack app that automatically sends AI-generated birthday and work-anniversary shoutouts to teammates, with a web dashboard for managing your roster, settings, and billing.",
+  "theme": "almond",
+  "primaryColor": "#a4496c",
+  "lightColor": "#f7f0df",
+  "darkColor": "#493872",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "how-it-works"
+            ]
+          },
+          {
+            "group": "Using Cake Day",
+            "pages": [
+              "using/dashboard",
+              "using/roster",
+              "using/settings",
+              "using/slack-commands"
+            ]
+          },
+          {
+            "group": "Admin Guides",
+            "pages": [
+              "guides/inviting-members",
+              "guides/broadcast",
+              "guides/team-leaders",
+              "guides/csv-import"
+            ]
+          },
+          {
+            "group": "Plans & Billing",
+            "pages": [
+              "billing/plans",
+              "billing/upgrade",
+              "billing/usage-and-caps"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/privacy-and-data",
+              "help/troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "AI-generated birthday and work-anniversary shoutouts posted automatically in Slack",
+    "Member opt-in flow — teammates add their own dates, admins never manage a spreadsheet",
+    "Web dashboard at cakeday.io/app for roster management, settings, and billing",
+    "Per-workspace scheduling: choose the channel, post time, and timezone",
+    "Four pricing tiers (Free, Starter, Growth, Pro) billed by celebrations per year, not roster size",
+    "/cakeday slash command for quick access from anywhere in Slack",
+    "Separate birthday and anniversary channels (Starter+)",
+    "Mass broadcast invites to onboard the whole workspace at once (Starter+)",
+    "CSV roster import (Starter+)",
+    "Custom GIF library curation (Growth+)",
+    "Custom AI tone prompts and branded shoutout display name/icon (Pro)",
+    "Activity log and analytics (Growth+)"
+  ],
+  "publicApiSurface": [
+    "/cakeday me — view or update your own birthday and work anniversary",
+    "/cakeday invite @user — send a Slack DM invite to add their dates",
+    "/cakeday broadcast — mass-DM the workspace to invite opt-ins (admin, Starter+)",
+    "/cakeday test @user [anniversary] — preview a shoutout ephemerally (admin)",
+    "/cakeday usage — view annual celebration budget and remaining cap (admin)",
+    "/cakeday admins — list current Cake Day admins and celebration channels",
+    "/cakeday help — show available commands",
+    "cakeday.io/app — authenticated workspace portal (dashboard, roster, settings, billing)",
+    "cakeday.io/app/settings — channel, post time, timezone, pause/resume, AI voice, custom GIFs",
+    "cakeday.io/app/roster — add, edit, and remove roster members; CSV import",
+    "cakeday.io/app/admins — manage workspace admins",
+    "cakeday.io/app/billing — plan, usage, and Stripe subscription management",
+    "cakeday.io/pricing — plan comparison and checkout entry"
+  ]
+}

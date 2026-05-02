@@ -1,0 +1,50 @@
+---
+title: "Get started with Cake Day"
+sidebarTitle: "Quick Start"
+description: "Install Cake Day, configure your celebration channel and post schedule, and send your first AI-generated shoutout in under 5 minutes."
+---
+
+Cake Day connects to your Slack workspace via OAuth and starts posting AI-generated birthday and work-anniversary shoutouts automatically. This guide walks you through the full setup from install to your first preview shoutout.
+
+<Note>
+  Setup takes under 5 minutes. No credit card is required for the Free plan.
+</Note>
+
+<Steps>
+  <Step title="Install Cake Day">
+    Go to [cakeday.io](https://cakeday.io) and click **Add to Slack**. You'll be taken to Slack's standard OAuth authorization screen.
+  </Step>
+
+  <Step title="Authorize in your Slack workspace">
+    Review the permissions Cake Day requests, then click **Allow**. Cake Day uses only the scopes it needs to post messages and manage the roster — no message history is read.
+  </Step>
+
+  <Step title="Complete the setup wizard">
+    After authorizing, you're redirected to [cakeday.io/app/onboarding](https://cakeday.io/app/onboarding). The setup wizard asks you to:
+
+    - **Pick a celebration channel** — the channel where birthday and anniversary shoutouts will be posted.
+    - **Set a post time and timezone** — Cake Day runs its daily check at this exact time, adjusted for your workspace's timezone.
+
+    You can update either setting later from [cakeday.io/app/settings](https://cakeday.io/app/settings) or by running `/cakeday setup` in Slack.
+  </Step>
+
+  <Step title="Add yourself to the roster">
+    In any Slack channel, run `/cakeday me`. A modal opens where you can enter your birthday and your work start date. You can fill in one or both — Cake Day celebrates whichever dates you provide.
+  </Step>
+
+  <Step title="Invite teammates">
+    To invite someone individually, run `/cakeday invite @teammate` in Slack. They'll receive a DM with an **Add my dates** button to opt in on their own.
+
+    To invite in bulk, use the **Roster** page at [cakeday.io/app/roster](https://cakeday.io/app/roster) to send DM invites to multiple teammates at once.
+  </Step>
+
+  <Step title="Preview a shoutout">
+    Admins can preview what a shoutout will look like before it posts publicly. Run `/cakeday test @yourself` to see a birthday preview, or `/cakeday test @yourself anniversary` for a work-anniversary preview. The preview is ephemeral — only you can see it.
+  </Step>
+
+  <Step title="You're done">
+    Cake Day checks for celebrations every day at your configured time. When someone on the roster has a birthday or work anniversary, it generates an AI message via Google Gemini, pairs it with a curated GIF, and posts it in your celebration channel tagging the person.
+
+    You don't need to do anything else — shoutouts run on autopilot.
+  </Step>
+</Steps>
