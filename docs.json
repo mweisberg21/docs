@@ -86,5 +86,8 @@
       "href": "https://cakeday.io"
     }
   },
-  "logo": "/images/Cakeday(1).png"
+  "logo": {
+    "light": "/images/cakeday-logo-light.png",
+    "dark": "/images/cakeday-logo-dark.png"
+  }
 }
