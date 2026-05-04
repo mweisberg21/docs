@@ -4,9 +4,9 @@
   "name": "Cake Day",
   "description": "Help center for Cake Day — the Slack app that sends AI-generated birthday and work-anniversary shoutouts to your team.",
   "colors": {
-    "primary": "#FF5B8A",
-    "light": "#FF5B8A",
-    "dark": "#7C8CFF"
+    "primary": "#7C8CFF",
+    "light": "#7C8CFF",
+    "dark": "#FF5B8A"
   },
   "fonts": {
     "family": "Inter Tight"

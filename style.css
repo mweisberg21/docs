@@ -15,6 +15,7 @@
   --cake-candy:    #FF5B8A;
   --cake-berry:    #E23E70;
   --cake-party:    #7C8CFF;
+  --cake-party-deep: #5E6DD9;
   --cake-ink:      #1A1826;
   --cake-ink-deep: #0E0D17;
   --cake-ink-soft: rgba(26, 24, 38, 0.70);
@@ -133,19 +134,15 @@ main :not(pre) > code {
 }
 
 /* ---------- Callouts -------------------------------------------
-   Party periwinkle bar on Note/Info, candy bar on Tip/Check,
-   candy-tinted bg on Warning. White card surface, ink hairline. */
-[data-component-part*="callout"],
-[role="note"] {
+   Mintlify ships typed colors per callout (Note, Warning, Tip,
+   Info, Check). Don't override the background — that nukes the
+   typed differentiation and creates a white-rectangle-on-tinted-
+   shape layering bug from substring-matching child elements.
+   Just round the corners and drop the shadow so they sit on the
+   cream canvas without floating. */
+[data-component-part="callout"] {
   border-radius: 1rem !important;
-  background: var(--cake-white) !important;
-  border: 1px solid var(--cake-ink-line) !important;
   box-shadow: none !important;
-}
-.dark [data-component-part*="callout"],
-.dark [role="note"] {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 /* ---------- Focus rings ----------------------------------------
@@ -246,7 +243,7 @@ li.navbar-link > :is(a, button) {
 }
 
 .nav-dropdown-products-selector-item-icon {
-  background-color: var(--cake-candy) !important;
+  background-color: var(--cake-party) !important;
   color: #ffffff !important;
   border-radius: 0.375rem !important;
   aspect-ratio: 1;
@@ -270,7 +267,7 @@ li.navbar-link > :is(a, button) {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 0.5rem;
-    background: var(--cake-candy);
+    background: var(--cake-party);
     pointer-events: none;
   }
 
@@ -308,7 +305,7 @@ li.navbar-link > :is(a, button) {
   }
 
   > :is(a, button, div, span) {
-    background-color: var(--cake-candy) !important;
+    background-color: var(--cake-party) !important;
     color: #ffffff !important;
     height: 2.25rem !important;
     padding: 0 1rem !important;
@@ -321,7 +318,7 @@ li.navbar-link > :is(a, button) {
     transition: background-color 0.15s ease-out !important;
 
     &:hover {
-      background-color: var(--cake-berry) !important;
+      background-color: var(--cake-party-deep) !important;
     }
   }
 
@@ -366,7 +363,7 @@ ul:is(:has(> #topbar-cta-button), :has(> li.navbar-link)) {
         aspect-ratio: 2;
         border-radius: 1rem;
         transition: background-color 0.15s ease-out;
-        background-color: var(--cake-candy);
+        background-color: var(--cake-party);
         color: #ffffff !important;
 
         svg {
