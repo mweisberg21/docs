@@ -56,6 +56,18 @@ Cake Day is designed to be simple for both admins and teammates. If something is
     Yes. Go to [Settings](https://cakeday.io/app/settings) and toggle **Paused**. No shoutouts will be posted while Cake Day is paused. Celebrations that fall during a pause are not retroactively sent after you resume.
   </Accordion>
 
+  <Accordion title="Can I change the tone of the messages?">
+    Yes — every workspace, on every plan, can pick from four curated **voice presets**: Balanced (the default), Professional, Playful, and Warm & close-knit. Switch presets at [cakeday.io/app/settings](https://cakeday.io/app/settings) under **Voice & branding** → **Voice preset**. The new tone applies to the next scheduled shoutout. Use `/cakeday test @yourself` in Slack to preview before it goes live.
+
+    Pro workspaces can also add a **custom voice & rules** prompt on top of the preset to layer team-specific guidance — sign-offs, nicknames, never-say words, inside references.
+  </Accordion>
+
+  <Accordion title="Can Cake Day include our company name in anniversary messages?">
+    Yes, on the Pro plan. Set your company name at [cakeday.io/app/settings](https://cakeday.io/app/settings) under **Voice & branding** → **Custom branding** → **Company name**. Once set, anniversary shoutouts can naturally read as *"5 years at Acme!"* instead of *"5-year milestone"*.
+
+    The company name is only used in anniversary messages — birthday shoutouts never reference it. Leave the field blank to skip company references entirely.
+  </Accordion>
+
   <Accordion title="What AI model does Cake Day use?">
     Cake Day uses Google's Gemini 2.5 Flash via the paid Gemini API to write each celebration message. Cake Day sends only the celebrant's display name, celebration type (birthday or anniversary), timing framing, and — for anniversaries — the year count. No personal emails, message history, or other sensitive data is sent to Google.
 

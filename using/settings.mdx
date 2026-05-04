@@ -1,7 +1,7 @@
 ---
 title: "Configure Cake Day settings for your workspace"
 sidebarTitle: "Settings"
-description: "The Settings page at cakeday.io/app/settings controls celebration channels, post schedule, pause state, AI voice, custom GIFs, and custom branding."
+description: "The Settings page at cakeday.io/app/settings controls celebration channels, post schedule, pause state, voice preset, team rules, custom GIFs, and custom branding."
 ---
 
 The Settings page at [cakeday.io/app/settings](https://cakeday.io/app/settings) is where you configure how and when Cake Day posts shoutouts, and — on higher plans — how those shoutouts look and sound. The page is organized into three tabs: **General**, **Voice & branding**, and **Custom GIFs**.
@@ -36,25 +36,51 @@ The **Live / Paused** toggle at the top right of the General panel lets you stop
 
 Flip the toggle back to **Live** to resume posting.
 
-## Voice & branding (Pro)
+## Voice & branding
 
-### Custom AI voice
+The Voice & branding tab is split into three sections. Each is plan-gated independently — you don't need Pro to shape Cake Day's tone.
 
-The **Voice guidance** field lets you write a short prompt — up to 2,000 characters — that shapes the style of every AI-generated shoutout. For example: *"Use a slightly more formal tone. Avoid emoji of food. Always sign off with —the team."*
+### Voice preset
 
-This field is only active on the Pro plan. On lower plans the field is locked and a prompt has no effect.
+The **Voice preset** picker controls Cake Day's overall tone. Pick one of four curated presets — every workspace gets this, on every plan, including Free.
 
-Your guidance shapes style only. Cake Day's safety rules — never fabricating facts about a teammate, never claiming personal knowledge, length limits, profanity filters — always apply on top of whatever you write.
+| Preset | Vibe |
+|---|---|
+| **Balanced** | Warm and celebratory. The default Cake Day voice. |
+| **Professional** | Formal and corporate-safe. Minimal emoji. |
+| **Playful** | High energy. More emoji, more hype. |
+| **Warm & close-knit** | Sincere and heartfelt. Quietly celebratory. |
 
-### Custom branding
+Click a preset to switch — Cake Day saves the change immediately and the next scheduled shoutout uses the new tone. Use `/cakeday test @yourself anniversary` (or `/cakeday test @yourself` for a birthday) to preview the effect.
+
+### Voice & rules (Pro)
+
+The **Voice guidance** field lets you write a short prompt — up to 2,000 characters — that adds team-specific rules on top of the chosen preset. This is for things the preset can't know: nicknames, sign-offs, never-say words, inside references.
+
+Click **See examples** above the input for inspiration. The kinds of things that belong here:
+
+- **Team name & sign-off** — *"We call ourselves the Pack. Sign off rally lines with — the Pack 🐺."*
+- **Never-say rules** — *"Never use 'crushing it', 'killing it', or corporate phrases like 'synergy'."*
+- **Always-do rules** — *"Mention how many years they've been with us as 'X trips around the sun'."*
+- **Team vocabulary** — *"We're a coffee company — slip in a reference to espresso or the roastery when it fits naturally."*
+- **Cultural fit** — *"Skip US-specific references and sports metaphors — we're a remote team across timezones."*
+- **Inside jokes** — *"Our team mascot is a chili pepper 🌶️ — drop one in occasionally."*
+
+Your rules layer on top of the preset, but the preset still owns sentence shape, energy, and emoji density. Cake Day's safety rules — never fabricating facts about a teammate, never claiming personal knowledge, length limits, profanity filters — always apply on top of everything.
+
+This field is Pro-only. On lower plans it's locked and an upgrade banner shows in its place.
+
+### Custom branding (Pro)
 
 **Display name** — the name the bot uses when posting shoutouts (e.g., "People Team" instead of "Cake Day"). Leave blank to use the default.
 
+**Company name** — the name of your organization, used in anniversary messages so they can read naturally as *"5 years at Acme!"* instead of generic *"5-year milestone"*. Optional; leave blank to skip company references entirely. Only used in anniversary shoutouts — birthday messages never reference your company name.
+
 **Avatar icon** — a custom image (PNG or JPEG, max 1 MB, square recommended) used as the bot's profile picture when posting. Upload a new icon or remove the current one from this panel.
 
-Custom branding applies to real scheduled shoutouts only. Previews from `/cakeday test` always render with the default Cake Day identity due to a Slack platform limitation.
+Custom branding applies to real scheduled shoutouts only. Previews from `/cakeday test` always render with the default Cake Day identity due to a Slack platform limitation. The company name does appear in `/cakeday test` previews, since it's part of the generated message text rather than the bot's posting identity.
 
-Both fields are Pro-only and locked on lower plans.
+All three fields are Pro-only and locked on lower plans.
 
 ## Custom GIFs (Growth and above)
 
